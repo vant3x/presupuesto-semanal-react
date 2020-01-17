@@ -42,9 +42,8 @@ function App() {
       guardarCrearGasto(false);
    } 
 
-  }, [gasto]
+  }, [gasto, crearGasto, gastos, restante]);  
 
-);  
   return (
     <div className="container">
       <header>
