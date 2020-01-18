@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import Error from './Error';
 import shortid from 'shortid';
+import PropTypes from 'prop-types';
+import Error from './Error';
 
 const Form = ({guardarGasto, guardarCrearGasto}) => {
 
@@ -84,6 +85,11 @@ const Form = ({guardarGasto, guardarCrearGasto}) => {
       >Agregar Gasto <i className="fas fa-plus"></i></button>
     </form>
   )
+};
+
+Form.propTypes = {
+  guardarGasto: PropTypes.func.isRequired,
+  guardarCrearGasto: PropTypes.func.isRequired
 }
 
 export default Form;
